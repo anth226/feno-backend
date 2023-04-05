@@ -27,18 +27,25 @@ This is a Feno Backend created in FastAPI with PostgreSQL, Alembic for database 
     
  To set up this project locally, follow these steps:
     
-   1.  Clone the repository:
-        `git clone https://github.com/anth226/feno-backend` 
-        `cd fastapi-starter-template`
+1.  Clone the repository:
+
+    `git clone https://github.com/anth226/feno-backend`
+
+2.  Navigate to the project directory:
+
+    `cd feno-backend`
         
-    2.  Create and activate a virtual environment:
-        `pipenv shell` 
+3. Create and activate a virtual environment:
+
+    `pipenv shell` 
         
-    3.  Install the project dependencies:
-        `pipenv install` 
+4. Install the project dependencies:
+
+    `pipenv install` 
         
-    4.  Run the project:
-        `uvicorn main:app --reload` 
+5. Run the project:
+
+    `uvicorn main:app --reload` 
 
 ## Usage
 
