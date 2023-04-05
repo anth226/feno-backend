@@ -4,6 +4,7 @@ from config.database import get_db
 from models.usermodels import User
 from schemas.userschema import RegisterUser
 from .usersservice import UserService
+from config.token import get_currentUser
 
 router = APIRouter(prefix="/users", tags=["Users"])
 
@@ -16,6 +17,11 @@ def getAllUser(db: Session = Depends(get_db)):
 @router.post("/")
 def createUser(user: RegisterUser, db: Session = Depends(get_db)):
     return UserService.create_user(user, db)
+
+
+@router.get("/me")
+def getMe(current_user: User = Depends(get_currentUser)):
+    return current_user
 
 
 @router.put("/{userid}")
