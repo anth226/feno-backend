@@ -3,7 +3,7 @@ from fastapi.security import OAuth2PasswordRequestForm
 from config.token import create_access_token
 
 from config.database import get_db
-from models.usermodels import User
+from models.usermodel import User
 
 from config.hashing import Hashing
 
