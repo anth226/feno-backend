@@ -4,6 +4,7 @@ from config.database import Base
 from config.database import engine
 from auth import authrouter
 from users import userrouter
+from reviews import reviewrouter
 from fastapi.middleware.cors import CORSMiddleware
 
 
@@ -30,7 +31,8 @@ def hello():
 
 app.include_router(authrouter.router)
 app.include_router(userrouter.router)
+app.include_router(reviewrouter.router)
 
 
-if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+# if __name__ == "__main__":
+#     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
