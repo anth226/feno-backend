@@ -19,6 +19,7 @@ class UserService:
             name=user.name,
             email=user.email,
             password=Hashing.bcrypt(user.password),
+            is_admin=user.is_admin,
             is_active=user.is_active,
         )
 
@@ -36,6 +37,7 @@ class UserService:
         db_userid.name = user.name
         db_userid.email = user.email
         db_userid.password = Hashing.bcrypt(user.password)
+        db_userid.is_admin = user.is_admin
         db_userid.is_active = user.is_active
 
         db.commit()

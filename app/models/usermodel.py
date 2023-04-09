@@ -10,9 +10,10 @@ class User(Base):
     name = Column(String)
     email = Column(String)
     password = Column(String)
+    is_admin = Column(Boolean, default=False)
     is_active = Column(Boolean, default=False)
 
-    # reviews = relationship("ReviewModel", back_populates="user")
+    reviews = relationship("ReviewModel", back_populates="user")
 
     def __repr__(self):
         return f"<User {self.email}"
