@@ -1,11 +1,11 @@
 from fastapi import Depends
-from models.productmodel import ProductModel
-from config.token import get_currentUser
-from models.reviewmodel import ReviewModel
-from models.usermodel import User
-from config.database import get_db
 from sqlalchemy.orm import Session
-from schemas.reviewschema import Review
+from app.models.productmodel import ProductModel
+from app.config.token import get_currentUser
+from app.models.reviewmodel import ReviewModel
+from app.models.usermodel import User
+from app.config.database import get_db
+from app.schemas.reviewschema import Review
 
 
 class ReviewService:

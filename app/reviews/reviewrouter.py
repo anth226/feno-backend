@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from config.database import get_db
-from models.usermodel import User
-from schemas.reviewschema import Review
-from config.token import get_currentUser
+from app.config.database import get_db
+from app.models.usermodel import User
+from app.schemas.reviewschema import Review
+from app.config.token import get_currentUser
 from .reviewservice import ReviewService
 
 router = APIRouter(prefix="/review", tags=["Review"])

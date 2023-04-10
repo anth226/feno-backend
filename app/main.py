@@ -1,10 +1,10 @@
 import uvicorn
 from fastapi import FastAPI
-from config.database import Base
-from config.database import engine
-from auth import authrouter
-from users import userrouter
-from reviews import reviewrouter
+from app.config.database import Base
+from app.config.database import engine
+from app.auth import authrouter
+from app.users import userrouter
+from app.reviews import reviewrouter
 from fastapi.middleware.cors import CORSMiddleware
 
 
